@@ -9,6 +9,21 @@ app.use(express.static(path.join(__dirname, 'public'))); // Link to Public Folde
 app.use(bodyParser.urlencoded({extended:true})); //Permission to Body-Parser
 
 
+//Database Connection File 
+
+var con = mysql.createConnection({
+  host : "localhost",
+  user : "root",
+  password : "",
+  database : "kjsce"
+
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
+
 //Login Page Redering 
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/login.html'));
@@ -29,7 +44,7 @@ app.get('/register',function(req,res)
 app.post('/register',function(req,res)
 {
 
-  
+
 })
 
 

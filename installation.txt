@@ -1,0 +1,10 @@
+MYSQL Database Used
+
+
+Database Name  :- kjsce
+Database table name :- user
+
+Database LOCALHOST username :- "root"
+Database LOCALHOST Password :- ""
+
+fields :- Name , Email , Password ,Phone No
